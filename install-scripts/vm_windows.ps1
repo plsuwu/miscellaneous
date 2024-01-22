@@ -89,6 +89,8 @@ $binaries = @(
     "sleuthkit",
     "volatility3",
     "floss",
+    "yara",
+    "capa",
     "checksum"
     )
 
