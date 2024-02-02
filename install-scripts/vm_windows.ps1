@@ -1,8 +1,20 @@
 #Requires -RunAsAdministrator
 
-# ----------------------
-# untested & incomplete 
-# ----------------------
+# -------------------------------
+# NOT NECESSARILY WORKING :))
+# -------------------------------
+
+# run with `Invoke-RestMethod` & `Invoke-Expression` directly from GitHub:
+# ----------------------------------------------------------------------------------------------------------------
+# iex "& { $(irm raw.githubusercontent.com/plsuwu/miscellaneous/main/install-scripts/vm_windows.ps1) } -<args?>"
+# ----------------------------------------------------------------------------------------------------------------
+
+# fresh VMs can likely run the script without args:
+# ----------------------------------------------------------------------------------------------------------------
+# irm raw.githubusercontent.com/plsuwu/miscellaneous/main/install-scripts/vm_windows.ps1 | iex
+# ----------------------------------------------------------------------------------------------------------------
+
+
 
 param (
     [switch] $NoPyverInstall = $false,
@@ -14,7 +26,21 @@ $chocoPath = "C:\ProgramData\chocolatey\bin\"
 
 # -- pyenv & python vers --
 Write-Host " "
+
+# if pyenv isnt on PATH (which it likely isn't if this is a fresh machine), the script will break after pyenv installation:
+# -------------------------------------------------------------------------------------------------------------------------
+
+# before installing pyenv --> 
+# 1. check for $PROFILE, (create with `New-Item $PROFILE` if not present), 
+# 2. source with `. $PROFILE`, 
+# 3. install pyenv, 
+# 4. finally run `. $PROFILE` once more after install.
+
+# -------------------------------------------------------------------------------------------------------------------------
+
 Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"; # . $PROFILE;
+
+# -------------------------------------------------------------------------------------------------------------------------
 
 $pyvers = @(
     "3.12.1",
