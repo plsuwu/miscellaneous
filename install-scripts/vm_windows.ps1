@@ -129,12 +129,15 @@ Foreach ($bin in $binaries) {
 
 # -- manual downloads (will have to be installed by hand for now) --
 $SleuthkitUri="https://github.com/sleuthkit/sleuthkit/releases/download/sleuthkit-4.12.1/sleuthkit-4.12.1-win32.zip"
-Set-Location $env:USERPROFILE\Desktop; Invoke-WebRequest -Uri $SleuthkitUri -MaximumRedirection 20 -OutFile "sleuthkit.zip"; Invoke-Expression "7z x .\sleuthkit.zip"
+Set-Location $env:USERPROFILE\Desktop; Invoke-WebRequest -Uri $SleuthkitUri -MaximumRedirection 20 -OutFile "sleuthkit.zip"; Invoke-Expression "7z x .\sleuthkit.zip";
 $AutopsyUri="https://github.com/sleuthkit/autopsy/releases/download/autopsy-4.21.0/autopsy-4.21.0-64bit.msi" 
-Set-Location $env:USERPROFILE\Desktop; Invoke-WebRequest -Uri $AutopsyUri -MaximumRedirection 20 -OutFile "Autopsy-4.21.0-64bit.msi"; ".\Autopsy-4.21.0-64bit.msi"
+Set-Location $env:USERPROFILE\Desktop; Invoke-WebRequest -Uri $AutopsyUri -MaximumRedirection 20 -OutFile "Autopsy-4.21.0-64bit.msi"; ".\Autopsy-4.21.0-64bit.msi";
 $OLEDumpUri="https://didierstevens.com/files/software/oledump_V0_0_75.zip"
-Set-Location $env:USERPROFILE\Desktop; Invoke-WebRequest -Uri $OLEDumpUri -MaximumRedirection 20 -OutFile "OLEDump.zip"; Invoke-Expression "7z x .\OLEDump.zip"
+Set-Location $env:USERPROFILE\Desktop; Invoke-WebRequest -Uri $OLEDumpUri -MaximumRedirection 20 -OutFile "OLEDump.zip"; Invoke-Expression "7z x .\OLEDump.zip";
 
 # very necessary
 $ImgZipUri="https://storage.googleapis.com/plsuwu_pub/img.zip"
-Invoke-WebRequest -Uri $ImgZipUri -MaximumRedirection 20 -OutFile "img.zip"; Invoke-Expression "7z x .\img.zip"
+Invoke-WebRequest -Uri $ImgZipUri -MaximumRedirection 20 -OutFile "img.zip"; Invoke-Expression "7z x .\img.zip";
+
+Write-Host " "
+Write-Host "Script run complete" -ForegroundColor Green
