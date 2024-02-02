@@ -24,7 +24,7 @@ $pyvers = @(
     "2.7.18"
 )
 
-if (!($NoPyVerInstall)) {
+if (!($NoPyverInstall)) {
     foreach ($v in $pyvers) {
         pyenv install $v
     }
