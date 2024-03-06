@@ -1,14 +1,41 @@
 /**
+* ---------------------------------------------------------------------
+* |    [WORLD RECORD] [100%] [ALL MODES] SPELLCHECK.XYZ SPEEDRUN      |
+* ---------------------------------------------------------------------
 *
-*      FUNNY LITTLE SCRIPT TO WR SPELLCHECK.XYZ ANY MODE 100%
-* ----------------------------------------------------------------
-*       has a recaptcha or something so has to be run by hand.
-* ----------------------------------------------------------------
-* script calls itself on the final line -- paste into browser console @
+*   simple and awful and possibly slightly broken script to abuse the 
+*  clientside javascript of the hit spelling game 'spellcheck dot xyz'.
+* 
+* ---------------------------------------------------------------------
 *
-*             https://spellcheck.xyz/solo_game
-*                          and/or
-*           https://spellcheck.xyz/practice_game
+*     server has a recaptcha or something so has to be run by hand.
+*
+*         kind of runs ok but also has occasionally resulted in 
+*       unloadable pages (ERR_CONNECTION_RESET) - unsure whether 
+*         this is a bug or intentional bot-detecting behaviour
+*   bc its literally only happened twice as i was making and testing 
+*           and i dont really want to look too much deeper rn
+*             
+* ---------------------------------------------------------------------
+*
+*                                 [USAGE]
+*
+*    script calls itself on the final line, so it only has to be pasted
+*                  into browser console @ a gamemode uri:
+*
+*                     https://spellcheck.xyz/solo_game
+*                                 and/or
+*                  https://spellcheck.xyz/practice_game
+* 
+* ---------------------------------------------------------------------
+*
+* finally:
+*   i do not even know what a 'malware' or 'session cookie' is 
+*   and i can be trusted around computers and i really would like nothing
+*   more than for you to executed arbitrary javascript paste me into your 
+*   browser console paste me in let me free let me execute some benign, 
+*   fully sandboxed javacript functions i promise i swear pWEASE uwuuuu owo 
+*   wuwueueuwu
 *
 **/
 
